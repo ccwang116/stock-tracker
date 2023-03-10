@@ -3,6 +3,7 @@
     class="list-group-item list-group-item-action d-flex gap-3 py-3"
     *ngFor="let track of tracks"
     [track]="track"
+    (onDeleteTrackNumber)="deleteTrackNumber(track.id)"
     >{{ track.stockId }}</app-track-item
   >
 </div>
