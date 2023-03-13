@@ -24,4 +24,7 @@ export class TracksComponent implements OnInit {
           (this.tracks = this.tracks.filter((stock) => stock.id !== trackId))
       );
   }
+  addTrack(track: Partial<Track>) {
+    this.trackService.addTrack(track).subscribe((res) => this.tracks.push(res));
+  }
 }

@@ -16,4 +16,7 @@ export class TrackService {
     const url = this.apiUrl + '/' + trackId;
     return this.http.delete<Track[]>(url);
   }
+  addTrack(track: Partial<Track>): Observable<Track> {
+    return this.http.post<Track>(this.apiUrl, track);
+  }
 }

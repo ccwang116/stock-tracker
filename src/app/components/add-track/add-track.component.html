@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="stockId">Stock Id</label>
+    <input
+      type="text"
+      name="stockId"
+      [(ngModel)]="stockId"
+      class="form-control"
+      id="stockId"
+    />
+  </div>
+  <div class="form-group">
+    <label for="tracePrice">Trace Price</label>
+    <input
+      type="text"
+      name="tracePrice"
+      [(ngModel)]="tracePrice"
+      class="form-control"
+      id="tracePrice"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
