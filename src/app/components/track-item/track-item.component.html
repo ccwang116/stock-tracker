@@ -1,9 +1,13 @@
 <div class="d-flex gap-2 w-100 justify-content-between">
   <div>
     <h6 class="mb-0">{{ track.stockId }}</h6>
-    <p class="mb-0 opacity-75" *ngFor="let price of track.tracePrice">
+    <span
+      class="badge badge-info badge-pill mr-2"
+      *ngFor="let price of track.tracePrice"
+    >
       {{ price }}
-    </p>
+      <span class="badge badge-pill badge-light">X</span>
+    </span>
   </div>
   <small class="opacity-50 text-nowrap btn" (click)="onDelete(track.id)"
     >X</small
